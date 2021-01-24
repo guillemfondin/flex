@@ -85,7 +85,9 @@ class PackageJsonSynchronizer
 
     private function registerWebpackResources(array $phpPackages)
     {
-        if (!file_exists($controllersJsonPath = $this->rootDir.'/assets/controllers.json')) {
+        $controllersJsonPath = $this->rootDir.'/assets/js/controllers.json';
+
+        if (!file_exists($controllersJsonPath)) {
             return;
         }
 
